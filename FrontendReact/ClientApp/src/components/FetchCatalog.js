@@ -13,7 +13,8 @@ export class FetchCatalog extends Component {
         }
     }
 
-    API_URL = "https://localhost:7051/catalog";
+    // Ensure this is the URL that the APIGateway is running at
+    API_URL = "https://localhost:7051/catalog"; 
 
     componentDidMount() {
         this.refreshProducts();
