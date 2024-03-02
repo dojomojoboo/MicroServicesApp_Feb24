@@ -19,4 +19,5 @@
 <h3>Instructions on how to run</h3>
 <ul>
  <li>Ensure that in APIGateway/ocelot.json file, the host and ports are set correctly to whatever the associated service is running at, which can be found in the services Properties/launchSettings.json</li>
-</ul>
+<li>For this demonstration, all 3 projects must be running simulataneously to show a microservice running, an api gateway available and a react frontend making calls to the gateway to retrieve and display data. To do this in Visual Studio Mac, you right click on the solution and choose - Set startup projects, and ensure all three projects are selected. Also ensure Multiple Projects is selected as the debug choice so that all three projects are built and run together.</li>
+</ul> 
