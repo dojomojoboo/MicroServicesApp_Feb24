@@ -10,7 +10,13 @@
         }
       ],
       "UpstreamPathTemplate": "/catalog",
-      "UpstreamHttpMethod": [ "GET", "Post", "Delete" ]
+      "UpstreamHttpMethod": [ "GET", "Post", "Delete" ],
+      "CorsOptions": {
+        "AllowedOrigins": [ "http://localhost:7234","http://localhost:44414" ],
+        "AllowedMethods": [ "GET", "POST", "DELETE" ],
+        "AllowedHeaders": [ "Content-Type", "Authorization" ],
+        "AllowCredentials": true
+      }
     },
     {
       "DownstreamPathTemplate": "/todos/{id}",
@@ -22,10 +28,16 @@
         }
       ],
       "UpstreamPathTemplate": "/todos/{id}",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "CorsOptions": {
+        "AllowedOrigins": [ "http://localhost:7234", "http://localhost:44414" ],
+        "AllowedMethods": [ "GET", "POST", "DELETE" ],
+        "AllowedHeaders": [ "Content-Type", "Authorization" ],
+        "AllowCredentials": true
+      }
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:5000"
+    "BaseUrl": "https://localhost:7051/catalog"
   }
 }

@@ -15,6 +15,14 @@ builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(c
 
 var app = builder.Build();
 
+// Configure CORS
+app.UseCors(policy =>
+{
+    policy.AllowAnyOrigin()
+          .AllowAnyHeader()
+          .AllowAnyMethod();
+});
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
